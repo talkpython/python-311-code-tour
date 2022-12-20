@@ -57,6 +57,5 @@ def main():
     # print(f"The weight of bob and sarah is {bob.weight} & {sara.weight}")
 
 
-
 if __name__ == '__main__':
     main()
