@@ -4,14 +4,14 @@ import math
 
 def f_to_c(f: float) -> float:
     """Convert Fahrenheit to Celsius."""
-    x = f - 32
-    return x * 5 / 9
+    x = f - 32.0
+    return x * (5 / 9)
 
 
 def c_to_f(c: float) -> float:
     """Convert Celsius to Fahrenheit."""
-    x = c * 9 / 5
-    return x + 32
+    x = c * (9 / 5)
+    return x + 32.0
 
 
 TEST_VALUES = [-459.67, -273.15, 0.0, 32.0, 42.0, 273.15, 100.0, 212.0, 373.15]
