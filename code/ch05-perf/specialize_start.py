@@ -1,3 +1,4 @@
+import datetime
 import math
 
 
@@ -21,6 +22,10 @@ def test_conversions() -> None:
         assert_round_trip(t)
 
 
+def round_trip(t: float) -> float:
+    return f_to_c(c_to_f(t))
+
+
 def assert_round_trip(t: float) -> None:
     # Round-trip Fahrenheit through Celsius:
     assert math.isclose(t, f_to_c(c_to_f(t))), f"{t} F -> C -> F failed!"
@@ -33,4 +38,10 @@ def assert_round_trip(t: float) -> None:
 
 
 if __name__ == "__main__":
+    t0 = datetime.datetime.now()
+
     test_conversions()
+
+    t1 = datetime.datetime.now()
+    dt = t1 - t0
+    print(f'Done in {dt.total_seconds() * 1000:.2f} ms')
