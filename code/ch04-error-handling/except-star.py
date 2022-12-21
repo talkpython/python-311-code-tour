@@ -63,11 +63,31 @@ class FileException(Exception):
 
 
 def main():
+    # asyncio.run(record_action())
+
     try:
         asyncio.run(record_action())
-    except Exception as x:
-        print("Error:")
-        print(x)
+    except* DbException as db:
+        for e in db.exceptions:
+            print(f"DbException: Error with DB: {e}")
+    except* HttpException:
+        print("HttpException: Error with API")
+    except* FileException:
+        print("FileException: Error with file!")
+    except* Exception as x:
+        print(f"{len(x.exceptions)} additional errors:")
+        for e in x.exceptions:
+            print(f"Error: {e}")
+
+
+# def main():
+#     # asyncio.run(record_action())
+#
+#     try:
+#         asyncio.run(record_action())
+#     except Exception as x:
+#         print("Error:")
+#         print(type(x).__name__, x)
 
 
 async def record_action():
