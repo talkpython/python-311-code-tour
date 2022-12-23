@@ -1,6 +1,8 @@
 # Python 3.11: A Guided Tour Through Code
 
-Student materials and handouts for our [Python 3.11: A Guided Tour Through Code](https://training.talkpython.fm/courses/python-3.11-a-guided-tour-through-code) course
+Student materials and handouts for our 
+[Python 3.11: A Guided Tour Through Code](https://training.talkpython.fm/courses/python-3.11-a-guided-tour-through-code) 
+course.
 
 [![](readme_resources/python-311-code-tour.jpg)](https://training.talkpython.fm/courses/python-3.11-a-guided-tour-through-code)
 
